@@ -1,4 +1,4 @@
-
+﻿
 // DATABASE PESERTA: KATA SANDI DAN NAMA
 const participants = {
     "1310091": "Safira Hasna Wibowo",
