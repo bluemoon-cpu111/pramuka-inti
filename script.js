@@ -46,7 +46,8 @@ const participants = {
     "13070543": "Sakha Irfan Hamid",
     "13072444": "Muhammad Jabbar Romadhoni",
     "13062745": "Muhammad Raffi Putra Arwinanto",
-    "13072046": "Farhan Anas"
+    "13072046": "Farhan Anas",
+    "0000000": "Luthfia Anisa"
 };
 
 
@@ -90,37 +91,43 @@ function showAccess() {
 
 
 // MEMERIKSA KATA SANDI
+
 function checkCode() {
 
     const code = document.getElementById("accessCode").value.trim();
     const error = document.getElementById("errorMessage");
 
+    // KHUSUS PEMBUAT WEBSITE
+    if (code === "0000000") {
+        document.getElementById("accessPage").classList.add("hidden");
+        document.getElementById("pragasaPage").classList.remove("hidden");
+        error.textContent = "";
+        return;
+    }
+
+    // MEMERIKSA KODE PESERTA
     if (!Object.prototype.hasOwnProperty.call(participants, code)) {
         error.textContent = "Kata sandi tidak ditemukan. Silakan periksa kembali.";
         return;
     }
 
-    // Mengambil nama peserta
     const participantName = participants[code];
 
-    // Jika peserta lolos
+    // PESERTA LOLOS
     if (selectedCodes.includes(code)) {
 
         document.getElementById("participantNameSuccess").textContent = participantName;
-
         document.getElementById("accessPage").classList.add("hidden");
         document.getElementById("successPage").classList.remove("hidden");
 
     }
 
-    // Jika peserta belum lolos
+    // PESERTA BELUM LOLOS
     else {
 
         document.getElementById("participantNameNotSelected").textContent = participantName;
-
         document.getElementById("accessPage").classList.add("hidden");
         document.getElementById("notSelectedPage").classList.remove("hidden");
 
     }
-
 }
