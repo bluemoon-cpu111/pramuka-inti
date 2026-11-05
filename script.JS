@@ -95,7 +95,6 @@ function checkCode() {
     const code = document.getElementById("accessCode").value.trim();
     const error = document.getElementById("errorMessage");
 
-    // Validasi kata sandi
     if (!Object.prototype.hasOwnProperty.call(participants, code)) {
         error.textContent = "Kata sandi tidak ditemukan. Silakan periksa kembali.";
         return;
