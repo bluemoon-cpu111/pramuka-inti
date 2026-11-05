@@ -47,7 +47,7 @@ const participants = {
     "13072444": "Muhammad Jabbar Romadhoni",
     "13062745": "Muhammad Raffi Putra Arwinanto",
     "13072046": "Farhan Anas",
-    "0000000": "Luthfia Anisa"
+    "0000000": "Luluuuuuu"
 };
 
 
